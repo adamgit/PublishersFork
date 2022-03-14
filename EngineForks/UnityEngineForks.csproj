@@ -43,8 +43,12 @@
   <ItemGroup>
     <Compile Include="MissingClasses\2019-or-earlier\HelpBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkaroundUnityIMGUISetColor.cs" />
+    <Compile Include="WorkaroundUnityMissingEditorVersion.cs" />
     <Compile Include="WorkaroundUnityMissingGetComponentsOnAncestors.cs" />
     <Compile Include="WorkaroundUnityTextGeneratorMissingErrorReporting.cs" />
+    <Compile Include="WorkaroundUnityTexture2DPixelsPerPoint.cs" />
+    <Compile Include="WorkaroundUnityUIToolkitButtonsWithImages.cs" />
     <Compile Include="WorkaroundUnityUIToolkitMarginsAll.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
