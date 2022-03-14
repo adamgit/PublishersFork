@@ -1,5 +1,5 @@
 # PublishersFork
-Unity3D core API fixes - NOT released by Unity, but heavily used by AssetStore publishers
+Unity3D core API fixes - NOT released by Unity, discovered/invented by AssetStore publishers
 
 # Wat?
 A large bundle of standalone files, each of which fixes or works around one or more bugs in Unity3D. Download whichever ones you need.
