@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngineForks", "EngineForks\UnityEngineForks.csproj", "{D50940CA-CAB4-4C80-8265-6A23E28E1F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditorForks", "EditorForks\UnityEditorForks.csproj", "{E43B98FF-ACF1-4561-B21E-355F0D4B5113}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D50940CA-CAB4-4C80-8265-6A23E28E1F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50940CA-CAB4-4C80-8265-6A23E28E1F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50940CA-CAB4-4C80-8265-6A23E28E1F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50940CA-CAB4-4C80-8265-6A23E28E1F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43B98FF-ACF1-4561-B21E-355F0D4B5113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43B98FF-ACF1-4561-B21E-355F0D4B5113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43B98FF-ACF1-4561-B21E-355F0D4B5113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43B98FF-ACF1-4561-B21E-355F0D4B5113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+# Critical! Do not commit your Unity folder!
+UnityEditorFolderSymlink/
+
+# IDEs
+.idea
+
+# Microsoft C# build artifacts
+EditorForks/bin/
+EditorForks/obj/
+EngineForks/bin/
+EngineForks/obj/
