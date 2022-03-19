@@ -49,7 +49,9 @@
     <Compile Include="WorkaroundUnityTextGeneratorMissingErrorReporting.cs" />
     <Compile Include="WorkaroundUnityTexture2DPixelsPerPoint.cs" />
     <Compile Include="WorkaroundUnityUIToolkitButtonsWithImages.cs" />
+    <Compile Include="WorkaroundUnityUIToolkitFoldoutToggleIsPrivate.cs" />
     <Compile Include="WorkaroundUnityUIToolkitMarginsAll.cs" />
+    <Compile Include="WorkaroundUnityUIToolkitToggleBrokenLabelBug.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
