@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkaroundUnityMenuCommandContext.cs" />
+    <Compile Include="WorkaroundUnityMissingAssetDatabaseFindAPI.cs" />
     <Compile Include="WorkaroundUnityPrefabEditingSafe.cs" />
     <Compile Include="WorkaroundUnityUIToolkitBrokenObjectSelector.cs" />
   </ItemGroup>
