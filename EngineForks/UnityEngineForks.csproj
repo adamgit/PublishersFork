@@ -53,6 +53,7 @@
     <Compile Include="WorkaroundUnityTextGeneratorMissingErrorReporting.cs" />
     <Compile Include="WorkaroundUnityTexture2DPixelsPerPoint.cs" />
     <Compile Include="WorkaroundUnityUIToolkitButtonsWithImages.cs" />
+    <Compile Include="WorkaroundUnityUIToolkitFindOrCreate.cs" />
     <Compile Include="WorkaroundUnityUIToolkitFoldoutToggleIsPrivate.cs" />
     <Compile Include="WorkaroundUnityUIToolkitMarginsAll.cs" />
     <Compile Include="WorkaroundUnityUIToolkitToggleBrokenLabelBug.cs" />
