@@ -13,10 +13,45 @@ namespace UnityEditorForks
 	/// the AssetDatabase.Find methods") is extremely fragile and incorrectly documented (I logged bugs against this more than
 	/// a year ago, that were accepted, but Unity still hasn't fixed them - still hasn't corrected their own docs).
 	///
-	/// This class wraps the bad API call into a sensible one ... like Unity should have done. 
+	/// This class wraps the bad API call into a sensible one, and adds some obvious missing API calls they should/would
+	/// have included if they'd accepted input from real users before publishing it. 
 	/// </summary>
 	public static class WorkaroundUnityMissingAssetDatabaseFindAPI
 	{
+	/// <summary>
+    		/// Unity's new FindAssets API fails to support type-search, it supports only 'subtypes of ScriptableObject search',
+    		/// because they didn't think at all about the names or use-cases of their new API when creating it. So the obvious
+    		/// search-by-type will ALWAYS fail (by design - Unity's bad design) if you need to find 'assets that contain this
+    		/// type'. This method fixes that mistake in Unity's codebase by letting you search for "assets that contain
+    		/// components of type T".
+    		/// </summary>
+    		/// <param name="debugSettingsDiscovery"></param>
+    		/// <typeparam name="T"></typeparam>
+    		/// <returns></returns>
+    		public static List<T> FindAssetPrefabsByComponentType<T>( bool debugSettingsDiscovery = false ) where T : UnityEngine.Object
+    		{
+    			var prefabAssets = AssetDatabase.FindAssets( "t:prefab" );
+    			
+    			#if FALSE
+    			var foundObjects = new List<GameObject>();
+    			for( int i = 0; i < prefabAssets.Length; i++ )
+    			{
+    				foundObjects.Add( AssetDatabase.LoadAssetAtPath<GameObject>( AssetDatabase.GUIDToAssetPath( prefabAssets[i] ) ) );
+    			}
+    #else
+    			var foundComponentInstances = new List<T>();
+    			for( int i = 0; i < prefabAssets.Length; i++ )
+    			{
+    				if( AssetDatabase.LoadAssetAtPath<GameObject>( AssetDatabase.GUIDToAssetPath( prefabAssets[i] ) ).TryGetComponent<T>( out var component ) )
+    					foundComponentInstances.Add( component );
+    			}
+    			#endif
+    
+    			if( debugSettingsDiscovery ) Debug.Log( "Found objects at: " + string.Join( ",", foundComponentInstances.Select( settings => AssetDatabase.GetAssetPath( settings ) ) ) );
+    
+    			return foundComponentInstances;
+    		}
+    		
 		/// <summary>
 		/// Unity has an equivalent API call but for the past 3 years they've refused to let non-Unity staff access it; you
 		/// can access it via reflection and override their incorrect use of 'internal', or (their official recommendation)
