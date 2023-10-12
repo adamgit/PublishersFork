@@ -41,6 +41,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FixUnityUndoBlock.cs" />
     <Compile Include="MissingClasses\2019-or-earlier\HelpBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkaroundStarterAssetsDeletedInputFirstPersonController.cs" />
