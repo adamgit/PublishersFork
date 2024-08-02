@@ -12,9 +12,26 @@ A large bundle of standalone files, each of which fixes or works around one or m
 
 ## Option2: edit, customize, and submit pull-requests
 
-An optional .sln file is included which lets you open the files in your IDE and edit them there. This is a great way to double-check if there are any dependencies before adding a file to your project.
+Two optional .csproj files are included which let you open the files in your IDE and edit them there. This is a great way to double-check if there are any dependencies before adding a file to your project.
+
+### Enabling the .csproj / .sln
 
 **Critical**: For the .sln to work you must create a symlink after cloning, and it must be named "UnityEditorFolderSymlink". Without this, the IDE won't be able to find the Unity DLL's it needs to compile code.
+
+#### Windows: 
+1. Open a command prompt
+2. Navigate to the folder that you cloned this project into
+3. Create a 'hard junction' using this command line:
+
+> mklink /D UnityEditorFolderSymlink "C:\path\to\your\Unity\install\Editor"
+
+#### Mac / OSX:
+1. Open a shell window
+2. Navigate to the folder that you cloned this project into
+3. Create a 'symbolic link' using this command line:
+
+> ln -s /path/to/your/Unity/install/Editor UnityEditorFolderSymlink
+
 
 # Background
 As of Spring 2022, Unity is currently running 5-6 months behind on responding to bug reports and starting bugfixes; after they've started on a bug, it takes between 1 and 4 months for them to fix it (average: approximately 2 months). Once it's fixed, it takes them between 2 weeks and 4 months for them to publish the fix in the live versions of Unity.

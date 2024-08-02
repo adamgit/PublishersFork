@@ -50,6 +50,7 @@
     <Compile Include="WorkaroundUnityInternal.cs" />
     <Compile Include="WorkaroundUnityMissingEditorVersion.cs" />
     <Compile Include="WorkaroundUnityMissingGetComponentsOnAncestors.cs" />
+    <Compile Include="WorkaroundUnityMissingPlayerPrefsAPI.cs" />
     <Compile Include="WorkaroundUnityMissingTryGetComponent.cs" />
     <Compile Include="WorkaroundUnityTextGeneratorMissingErrorReporting.cs" />
     <Compile Include="WorkaroundUnityTexture2DPixelsPerPoint.cs" />
